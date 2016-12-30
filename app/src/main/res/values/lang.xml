@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lang">
+        <item>C</item>
+        <item>C++</item>
+        <item>Ensamblador</item>
+        <item>Java</item>
+        <item>Oracle</item>
+        <item>Pascal</item>
+        <item>Visual Basic</item>
+        <item>Visual C++</item>
+    </string-array>
+</resources>
