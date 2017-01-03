@@ -1,5 +1,6 @@
 package com.leonus96.joseph.cocomobasico;
 
+import android.icu.text.DecimalFormat;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -59,15 +60,19 @@ public class Resultados extends AppCompatActivity {
         double developers = esfuerzo/desTime;
 
 
+
+
         /***Llenamos datos***/
+
         varA.setText(Double.toString(a));
         varB.setText(Double.toString(b));
         varC.setText(Double.toString(c));
         varD.setText(Double.toString(d));
-        tvKldc.setText(Double.toString(kldc));
-        effort.setText(Double.toString(esfuerzo));
-        time.setText(Double.toString(desTime));
-        dev.setText(Double.toString(developers));
+        tvKldc.setText(Integer.toString((int)kldc));
+        effort.setText(Integer.toString((int)Math.ceil(esfuerzo)));
+        //effort.setText(Double.toString(Math.ceil(esfuerzo)));
+        time.setText(Integer.toString((int)Math.ceil(desTime)));
+        dev.setText(Integer.toString((int)Math.ceil(developers)));
     }
 
 }

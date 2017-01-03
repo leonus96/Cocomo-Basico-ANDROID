@@ -195,6 +195,6 @@ public class PF extends AppCompatActivity {
                 break;
         }
 
-        return rpta;
+        return rpta/100;
     }
 }
