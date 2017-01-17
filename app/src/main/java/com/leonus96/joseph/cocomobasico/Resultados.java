@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.test.suitebuilder.TestMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class Resultados extends AppCompatActivity {
     private TextView effort;
     private TextView time;
     private TextView dev;
+    private TextView costo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class Resultados extends AppCompatActivity {
         effort = (TextView) findViewById(R.id.effort);
         time = (TextView) findViewById(R.id.time);
         dev = (TextView) findViewById(R.id.dev);
+        costo = (TextView) findViewById(R.id.costo);
 
         cocomobasico();
     }
@@ -58,6 +61,7 @@ public class Resultados extends AppCompatActivity {
         double esfuerzo = a * Math.pow(kldc, b);
         double desTime = c * Math.pow(esfuerzo, d);
         double developers = esfuerzo/desTime;
+        double costoTotal = datos.getDouble("Sueldo") * esfuerzo;
 
 
 
@@ -73,6 +77,7 @@ public class Resultados extends AppCompatActivity {
         //effort.setText(Double.toString(Math.ceil(esfuerzo)));
         time.setText(Integer.toString((int)Math.ceil(desTime)));
         dev.setText(Integer.toString((int)Math.ceil(developers)));
+        costo.setText(Double.toString(costoTotal));
     }
 
 }

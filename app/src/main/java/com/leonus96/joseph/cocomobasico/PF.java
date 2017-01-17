@@ -124,6 +124,7 @@ public class PF extends AppCompatActivity {
                 Bundle type = getIntent().getExtras();
                 Intent intent = new Intent(PF.this, Resultados.class);
                 intent.putExtra("itemRadio", type.getInt("itemRadio"));
+                intent.putExtra("sueldo", type.getDouble("sueldo"));
                 intent.putExtra("KLDC", pf2KLDC());
                 startActivity(intent);
             }

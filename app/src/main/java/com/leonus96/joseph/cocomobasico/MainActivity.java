@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton radioButtonMedio;
     private RadioButton radioButtonEmbebido;
     private TextView textViewDescription;
+    private EditText editTextSueldo;
     private EditText editTextKLDC;
     private FancyButton buttonPF;
     private FloatingActionButton fab;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         radioButtonMedio = (RadioButton) findViewById(R.id.radioButtonMedio);
         radioButtonEmbebido = (RadioButton) findViewById(R.id.radioButtonEmbebido);
         textViewDescription = (TextView) findViewById(R.id.textViewDescription);
+        editTextSueldo = (EditText) findViewById(R.id.editTextSueldo);
         editTextKLDC = (EditText) findViewById(R.id.editTextKLDC);
         buttonPF = (FancyButton) findViewById(R.id.buttonPF);
 
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, PF.class);
+                intent.putExtra("sueldo", Double.parseDouble(editTextSueldo.getText().toString()));
                 intent.putExtra("itemRadio", getItemChecked());
                 startActivity(intent);
 
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 if(validar()){
                     Intent intent = new Intent(MainActivity.this, Resultados.class);
                     intent.putExtra("itemRadio", getItemChecked());
+                    intent.putExtra("Sueldo", Double.parseDouble(editTextSueldo.getText().toString()));
                     intent.putExtra("KLDC", Double.parseDouble(editTextKLDC.getText().toString()));
                     startActivity(intent);
                 }

@@ -86,6 +86,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:text="Costo Hombre-Mes"
+                android:textColor="@color/colorPrimaryText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSueldo"
+                    android:layout_weight="1"
+                    android:ems="8"
+                    android:hint="Sueldo Promedio"
+                    android:inputType="number"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Miles de lineas de codigo"
                 android:textColor="@color/colorPrimaryText" />
 
@@ -134,6 +157,7 @@
 
 
             </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
